@@ -6,7 +6,7 @@ import * as fastPng from 'fast-png';
 
 export async function GET(
   _request: Request,
-  { params }: { params: { fileId: string } }
+  { params }: { params: Promise<{ fileId: string }> }
 ) {
   try {
     const { fileId } = await params;

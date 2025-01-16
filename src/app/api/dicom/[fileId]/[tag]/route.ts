@@ -5,7 +5,7 @@ import * as dicomParser from 'dicom-parser';
 
 export async function GET(
   _request: Request,
-  { params }: { params: { fileId: string; tag: string } }
+  { params }: { params: Promise<{ fileId: string; tag: string }> }
 ) {
   try {
     const { fileId, tag: _tag } = await params;
